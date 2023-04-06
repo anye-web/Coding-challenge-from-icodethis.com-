@@ -1,0 +1,162 @@
+@import "./reset";
+@import "./varriables";
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size_16;
+  background: $dark-clr__2;
+  color: $white-clr;
+}
+
+.section {
+  // background: $dark-clr__accent;
+  height: 100vh;
+  @include flexCenter(row);
+  overflow: hidden;
+}
+
+.content-info {
+  background-color: $dark-clr;
+  min-width: 40rem;
+  max-width: 25%;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11rem;
+    left: -3.8rem;
+    width: 120%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: $dark-clr__accent;
+    z-index: -100;
+  }
+
+  .primary-heading,
+  .secondary-heading {
+    margin-bottom: $margin__20;
+  }
+
+  #{&}__checklist {
+    .check__container {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: $font-size_16;
+      padding-left: 4rem;
+      margin-bottom: $margin__16;
+
+      // This disable the ability for user to select text within they selected area
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2.4rem;
+        width: 2.4rem;
+        background-color: $white-clr;
+        transition: $transition;
+
+        @include flexCenter(row);
+
+        &__icon {
+          font-size: 2rem;
+          display: none;
+          color: $white-clr;
+        }
+      }
+
+      input:checked ~ .checkmark .checkmark__icon {
+        display: block;
+      }
+
+      &:hover input ~ .checkmark {
+        background-color: $white-clr__accent;
+      }
+
+      input:checked ~ .checkmark {
+        background-color: $primary-clr;
+        box-shadow: $box-shadow__1;
+      }
+    }
+  }
+
+  #{&}__alert {
+    margin-top: $margin__30;
+    margin-bottom: $margin__30;
+    padding: 2rem;
+    background: $dark-clr__accent;
+  }
+
+  #{&}__radio {
+    .radio_container {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding-left: 4rem;
+      margin-bottom: $margin__16;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .radiomark {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2.4rem;
+        width: 2.4rem;
+        border-radius: 50%;
+        background-color: $white-clr;
+        transition: $transition;
+      }
+    }
+
+    &:hover input ~ .radiomark {
+      background-color: $white-clr__accent;
+    }
+    & input:checked ~ .radiomark {
+      background-color: $primary-clr;
+    }
+  }
+
+  .footer {
+    margin-top: $margin__48;
+  }
+}
+
+.content-info .primary-heading,
+.content-info .secondary-heading {
+  margin-bottom: $margin__20;
+}

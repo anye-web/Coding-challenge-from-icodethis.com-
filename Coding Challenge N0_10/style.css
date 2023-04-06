@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* #37c88c , , #e0551f  */
+/* :root {
+  --primary-clr: #e0551f;
+  --primary-clr__shade: rgba(224, 86, 31, 0.221);
+  --secondary-clr: #9d3b16;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+
+  --black-clr: #000;
+} */
+:root {
+  --primary-clr: #37c88c;
+  --primary-clr__shade: rgba(55, 200, 140, 0.221);
+  --secondary-clr: #217854;
+  --secondary-clr: #217854;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+  --black-clr: #000;
+  --box-shadow: 0 0 2.4rem 0 rgba(55, 200, 140, 0.329);
+  --transition-5: all 0.5s ease;
+}
+
+html {
+  font-size: 62.5%;
+}
+/*  */
+body {
+  font-size: 1.8rem;
+  color: var(--white-clr);
+  background-color: var(--primary-clr);
+  line-height: 1.8rem;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 4.1rem 3.1rem rgba(0, 0, 0, 0.229);
+  overflow: hidden;
+  min-width: 25%;
+}
+.content-header {
+  padding: 4rem 4rem 0rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bars {
+  background-color: var(--white-clr);
+  height: 5px;
+  width: 4rem;
+  border-radius: 1rem;
+}
+.bars-offset {
+  position: relative;
+  left: -6px;
+}
+
+.header-icon .icon {
+  font-size: 3rem;
+}
+
+.content-info {
+  padding: 4rem 4rem 4rem 4rem;
+  text-align: center;
+}
+.info-header {
+  margin-bottom: 4rem;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.info-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.info-btn {
+  margin-top: 4rem;
+}
+.btn {
+  padding: 1.8rem 5.5rem;
+  border: none;
+  border-radius: 5rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.821);
+  box-shadow: 6px 15px 33px 24px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-5);
+  cursor: pointer;
+  z-index: 1000;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 0%;
+  width: 103%;
+  background-color: var(--primary-clr);
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  color: var(--white-clr);
+  scale: 0.9;
+}
+
+.btn:hover::after {
+  height: 103%;
+  background-color: var(--primary-clr);
+}
+
+.btn:active {
+  scale: 0.79;
+}
+
+.content-footer {
+  background-color: var(--white-clr);
+  color: var(--black-clr);
+  padding: 4rem;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+.lead {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.info-circle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.circle {
+  background-color: var(--primary-clr__shade);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
+.circle-1 {
+  height: 2rem;
+  width: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
+}
+.circle-2 {
+  height: 3rem;
+  width: 3rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
+}
+.circle-3 {
+  height: 0.8rem;
+  width: 0.8rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
+}
+.circle-4 {
+  height: 1.8rem;
+  width: 1.8rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
+}
+.circle-5 {
+  height: 2.3rem;
+  width: 2.3rem;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
+}

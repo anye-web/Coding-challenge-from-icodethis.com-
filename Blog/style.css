@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Vinyl&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/* #37c88c , , #e0551f  */
+/* :root {
+  --primary-clr: #e0551f;
+  --primary-clr__shade: rgba(224, 86, 31, 0.221);
+  --secondary-clr: #9d3b16;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+
+  --black-clr: #000;
+} */
+:root {
+  --primary-clr: #37c88c;
+  --primary-clr__shade: rgba(55, 200, 140, 0.121);
+  --secondary-clr: #217854;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+  --black-clr: #01130b;
+  --gray-clr: #999;
+  --box-shadow: 0 0 7.4rem 0 rgba(55, 200, 140, 0.329);
+  --transition-5: all 0.5s ease;
+}
+
+/*  */
+body {
+  font-size: 1.8rem;
+  color: var(--white-clr);
+  background-color: var(--white-clr);
+  line-height: 2rem;
+  font-family: "Roboto Slab", serif;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100rem;
+  padding: 0 4rem;
+}
+
+.section {
+  background-color: var(--primary-clr__shade);
+  color: var(--black-clr);
+  height: 100vh;
+}
+
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 4rem;
+}
+
+.content {
+  border-radius: 1.2rem;
+  background-color: var(--white-clr);
+  overflow: hidden;
+  height: 50rem;
+  transition: var(--transition-5);
+}
+.content.active,
+.content:hover {
+  box-shadow: var(--box-shadow);
+}
+.img {
+  height: 20rem;
+}
+
+.content-info {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  padding: 0 3rem;
+}
+.content-info.life {
+  margin-bottom: 7rem;
+}
+.content-info.tech {
+  margin-bottom: 5rem;
+}
+.tag {
+  margin-bottom: 0.5rem;
+}
+.tag p {
+  padding: 0.2rem 1.5rem;
+  border-radius: 5rem;
+  width: fit-content;
+  font-size: 1rem;
+  color: var(--white-clr);
+  text-transform: uppercase;
+}
+.tag p.tech {
+  background-color: var(--primary-clr);
+}
+.tag p.pop {
+  background-color: #bf55ec;
+}
+.tag p.life {
+  background-color: #00008b;
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.2rem;
+}
+
+.content-footer {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.author-img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+.author-name {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.day-written {
+  font-size: 1.2rem;
+  color: var(--gray-clr);
+  text-transform: capitalize;
+}
+
+@media (max-width: 37.5em) {
+  .section {
+    min-height: 100vh;
+  }
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}

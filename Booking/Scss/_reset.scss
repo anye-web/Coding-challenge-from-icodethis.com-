@@ -1,0 +1,50 @@
+@import "./varriables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: $white-clr;
+}
+.anchor_link {
+  text-decoration: underline;
+  color: $primary-clr;
+}
+.primary-heading {
+  font-size: $font-size_20;
+  color: $white-clr;
+}
+.secondary-heading {
+  font-size: $font-size_20;
+  color: $white-clr;
+}
+
+.lead {
+  font-size: $font-size_14;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: $font-size_24;
+  font-family: inherit;
+  font-weight: bold;
+  background: $primary-clr;
+  color: $white-clr;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $primary-clr__dark;
+    box-shadow: $box-shadow__1;
+  }
+}

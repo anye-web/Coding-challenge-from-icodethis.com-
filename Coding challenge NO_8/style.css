@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #4496ee;
+  --secondary-clr: #2b66cc;
+  --white-clr: #fff;
+  --gray-clr: #d0d1d4;
+  --black-clr: #50506e;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  color: var(--black-clr);
+  background-color: var(--secondary-clr);
+  line-height: 1.8rem;
+}
+
+.section-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: var(--white-clr);
+  border-radius: 1.4rem;
+  min-width: 25%;
+  overflow: hidden;
+  box-shadow: 0 3.8rem 6.5rem 5rem rgba(68, 150, 238, 0.577);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--primary-clr);
+  color: var(--white-clr);
+  width: 100%;
+}
+
+.primary-header {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.close-icon {
+  font-size: 2.2rem;
+  color: var(--gray-clr);
+}
+
+.main-content {
+  padding: 3rem;
+}
+.main-content__header {
+  margin-bottom: 2.4rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondary-header {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.lead {
+  color: var(--gray-clr);
+}
+.text {
+  color: var(--primary-clr);
+}
+.loading-bar {
+  width: 100%;
+  background-color: var(--gray-clr);
+  height: 7px;
+  margin: 1rem 0;
+  border-radius: 50px;
+  position: relative;
+}
+.loading-bar::after {
+  content: "";
+  width: 45%;
+  background-color: var(--primary-clr);
+  height: 7px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.primary--clr {
+  color: var(--primary-clr);
+}
+
+.main-content__body {
+  border: 4px dashed var(--gray-clr);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.lead-text {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+.upload-icon {
+  font-size: 5rem;
+  color: var(--primary-clr);
+}
+.btn-div {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.btn {
+  padding: 1.5rem 4.5rem;
+  border-radius: 1rem;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white-clr);
+  background-color: var(--primary-clr);
+  box-shadow: 0 3.8rem 6.5rem 0.4rem rgba(68, 150, 238, 0.377);
+  transition: all 0.5s ease-in;
+}
+
+.btn:hover {
+  box-shadow: 0 3.8rem 6.5rem 0.4rem rgba(68, 150, 238, 0.377) inset;
+}

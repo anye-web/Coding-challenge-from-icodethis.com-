@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik+Vinyl&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/* #37c88c , , #e0551f  */
+/* :root {
+  --primary-clr: #e0551f;
+  --primary-clr__shade: rgba(224, 86, 31, 0.221);
+  --secondary-clr: #9d3b16;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+
+  --black-clr: #000;
+} */
+:root {
+  --primary-clr: #37c88c;
+  --primary-clr__shade: rgba(55, 200, 140, 0.221);
+  --secondary-clr: #217854;
+  --white-clr: #fff;
+  --white-clr__shade: rgba(255, 255, 255, 0.532);
+  --black-clr: #01130b;
+  --gray-clr: #999;
+  --box-shadow: 0 0 2.4rem 0 rgba(55, 200, 140, 0.329);
+  --transition-5: all 0.5s ease;
+}
+
+/*  */
+body {
+  font-size: 1.8rem;
+  color: var(--white-clr);
+  background-color: var(--white-clr);
+  line-height: 1.8rem;
+  font-family: "Roboto Slab", serif;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  height: 100vh;
+  background-color: var(--primary-clr__shade);
+  color: var(--black-clr);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.lead {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+.content {
+  position: relative;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.right-info,
+.left-info {
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: var(--white-clr);
+  width: 35rem;
+}
+
+.personal-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.img-div {
+  width: 7rem;
+  height: 7rem;
+  border: 6px solid var(--primary-clr__shade);
+  border-radius: 50%;
+}
+.img {
+  border-radius: 50%;
+}
+.sec-title {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: var(--primary-clr);
+}
+.lead-title {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+.circle {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: transparent;
+  border: 2px solid var(--primary-clr);
+  border-radius: 50%;
+}
+.active {
+  background-color: var(--primary-clr);
+}
+.content-arrow {
+  position: relative;
+  font-size: 5rem;
+  color: var(--primary-clr);
+  width: 100%;
+}
+
+.arrow-left {
+  position: absolute;
+  left: -10rem;
+  top: -21rem;
+}
+.arrow-right {
+  position: absolute;
+  right: -10rem;
+  top: -21rem;
+}
