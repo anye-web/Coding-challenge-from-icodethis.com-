@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+$primary-clr: #37c88c;
+$primary-clr__dark: #2ca070;
+$white-clr: #f7fdfb;
+$white-clr__accent: #ccfdec;
+$dark-clr: #141d1b;
+$dark-clr__2: #0c1815;
+$dark-clr__accent: rgba(0, 0, 0, 0.406);
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Merienda", cursive;
+  font-size: 1.8rem;
+  color: $white-clr;
+  background-color: $dark-clr__2;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 10rem auto;
+  padding: 0 4rem;
+}
+.header {
+  background-color: $dark-clr;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  .navbar {
+    background-color: $dark-clr__accent;
+    border-radius: 1rem;
+    padding: 0 2rem;
+
+    @include flexCenter();
+
+    &-links {
+      display: inline-block;
+      @include flexCenter();
+      gap: 2rem;
+      padding: 3rem 0;
+    }
+
+    &-link .link {
+      text-transform: uppercase;
+      padding: 0.8rem 2rem;
+      border-radius: 1rem;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        background-color: $white-clr__accent;
+        color: $dark-clr;
+      }
+    }
+
+    .active {
+      background-color: $white-clr__accent;
+      color: $dark-clr;
+    }
+
+    &-contact {
+      @include flexCenter();
+      gap: 2rem;
+
+      .link-btn {
+        background-color: $primary-clr;
+      }
+    }
+    .dropdown {
+      position: relative;
+
+      &-link {
+        display: inline-block;
+        padding: 0.8rem 1rem;
+        border-radius: 1rem;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          background-color: $white-clr__accent;
+          color: $dark-clr;
+        }
+      }
+    }
+
+    &-dropdown {
+      position: absolute;
+      top: 3.8rem;
+      left: 0;
+      background: $white-clr;
+      color: $dark-clr;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      width: 35rem;
+    }
+  }
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}

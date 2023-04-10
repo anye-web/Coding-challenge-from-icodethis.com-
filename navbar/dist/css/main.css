@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Merienda", cursive;
+  font-size: 1.8rem;
+  color: #f7fdfb;
+  background-color: #0c1815;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 10rem auto;
+  padding: 0 4rem;
+}
+
+.header {
+  background-color: #141d1b;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.header .navbar {
+  background-color: rgba(0, 0, 0, 0.406);
+  border-radius: 1rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar-links {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.header .navbar-link .link {
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.header .navbar-link .link:hover {
+  background-color: #ccfdec;
+  color: #141d1b;
+}
+.header .navbar .active {
+  background-color: #ccfdec;
+  color: #141d1b;
+}
+.header .navbar-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.header .navbar-contact .link-btn {
+  background-color: #37c88c;
+}
+.header .navbar .dropdown {
+  position: relative;
+}
+.header .navbar .dropdown-link {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.header .navbar .dropdown-link:hover {
+  background-color: #ccfdec;
+  color: #141d1b;
+}
+.header .navbar-dropdown {
+  position: absolute;
+  top: 3.8rem;
+  left: 0;
+  background: #f7fdfb;
+  color: #141d1b;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 35rem;
+}
+
+.sub-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 1.4rem;
+}
