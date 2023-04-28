@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary__clr: #2ad482;
+  --primary__clr--shade: #1d945b;
+  --secondary__clr: #ff5959;
+  --dark__clr: #151515;
+  --white__clr: #ffffff;
+  --gray-clr: #2d2d2d;
+}
+
+body {
+  color: var(--dark__clr);
+  background-color: var(--gray-clr);
+  font-family: "Karma", serif;
+  font-size: 1.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--white__clr);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  color: var(--primary__clr);
+  border-bottom: 1px solid #f0f0f0;
+  padding: 2rem 4rem;
+}
+.form {
+  padding: 3rem 4rem;
+}
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.form-control input {
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  /* display: block; */
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 100%;
+  caret-color: var(--primary__clr);
+  outline: none;
+  transition: all 0.5s ease;
+}
+.form-control input:focus {
+  border-color: var(--primary__clr);
+}
+
+.form-control.success input {
+  border-color: var(--primary__clr);
+}
+.form-control.error input {
+  border-color: var(--secondary__clr);
+  caret-color: var(--secondary__clr);
+}
+.form-control.success .fa-check-circle {
+  color: var(--primary__clr);
+  visibility: visible;
+}
+.form-control.error .fa-exclamation-circle {
+  color: var(--secondary__clr);
+  visibility: visible;
+}
+.form-control i {
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: var(--secondary__clr);
+}
+
+.form button {
+  background-color: var(--primary__clr);
+  border: 2px solid var(--primary__clr);
+  color: var(--white__clr);
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.form button:hover {
+  background-color: var(--primary__clr--shade);
+}
+
+.form .success-message {
+  color: var(--primary__clr);
+  padding: 1rem 0;
+  visibility: hidden;
+  transition: all 0.5 ease;
+}
+.form .success-message.show {
+  visibility: visible;
+}

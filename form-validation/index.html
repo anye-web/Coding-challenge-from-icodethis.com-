@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Project || HTML || CSS || JS</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Create Account</h2>
+      </div>
+      <form class="form" id="form">
+        <!-- Form Start -->
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input type="text" placeholder="Janoh Junior" id="username" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <!-- End Form -->
+        <!-- Form Start -->
+        <div class="form-control">
+          <label for="email">email</label>
+          <input type="email" placeholder="janohjunior@gmail.com" id="email" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <!-- End Form -->
+        <!-- Form Start -->
+        <div class="form-control">
+          <label for="password">password</label>
+          <input type="password" placeholder="password" id="password" />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <!-- End Form -->
+        <!-- Form Start -->
+        <div class="form-control">
+          <label for="confirm-password">confirm-password</label>
+          <input
+            type="password"
+            placeholder="Confirm password"
+            id="confirm-password"
+          />
+          <i class="fas fa-check-circle"></i>
+          <i class="fas fa-exclamation-circle"></i>
+          <small>Error Message</small>
+        </div>
+        <!-- End Form -->
+        <!-- Success Message  -->
+        <h3 class="success-message">
+          Thank you!! Your account has been created
+        </h3>
+
+        <!-- End Success Message -->
+        <!-- Button  -->
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Script -->
+    <script
+      src="https://kit.fontawesome.com/71c011c213.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
